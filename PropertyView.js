@@ -50,7 +50,7 @@ class PropertyView extends React.Component {
       stats += ', ' + property.bathroom_number + ' ' + (property.bathroom_number > 1 ? 'bathrooms': 'bathroom');
     }
 
-    var price = property.price_formatted(' ')[0];
+    var price = property.price_formatted.split(' ')[0];
 
     return(
       <View style={styles.container}>

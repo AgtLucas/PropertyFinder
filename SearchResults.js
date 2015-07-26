@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react-native');
+var PropertyView = require('./PropertyView');
 
 var {
   StyleSheet,
@@ -51,12 +52,21 @@ class SearchResults extends React.Component {
     };
   }
 
+  rowPressed(propertyGuid) {
+    var property = this.props.listings.filter(prop => prop.guid === propertyGuid)[0];
+
+    this.props.navigator.push({
+      title: 'Property',
+      component: PropertyView,
+      passProps: {property: property}
+    })
+  }
+
   renderRow(rowData, sectionID, rowID) {
     var price = rowData.price_formatted.split(' ')[0];
 
     return(
-      <TouchableHighlight
-        onPress={() => this.rowPressed(rowData.guid)}
+      <TouchableHighlight onPress={() => this.rowPressed(rowData.guid)}
         underlayColor='#dddddd'>
         <View>
           <View style={styles.rowContainer}>

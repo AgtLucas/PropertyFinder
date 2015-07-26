@@ -49,7 +49,10 @@ var styles = StyleSheet.create({
   },
   searchInput: {
     height: 36,
-    padding: 4,
+    paddingTop: 4,
+    paddingRight: 8,
+    paddingBottom: 4,
+    paddingLeft: 8,
     marginRight: 5,
     flex: 4,
     fontSize: 18,
