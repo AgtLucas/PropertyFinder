@@ -5,6 +5,7 @@
 'use strict';
 
 var React = require('react-native');
+var SearchPage = require('./SearchPage');
 
 var {
   AppRegistry,
@@ -40,7 +41,7 @@ class ProperyFinder extends React.Component {
         style={styles.container}
         initialRoute={{
           title: 'PropFinder',
-          component: Yo
+          component: SearchPage
         }} />
     );
   }
