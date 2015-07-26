@@ -11,7 +11,7 @@ var {
   Text
 } = React;
 
-class SearchResult extends React.Component {
+class SearchResults extends React.Component {
 
   constructor(props) {
     super(props);
@@ -42,3 +42,5 @@ class SearchResult extends React.Component {
   }
 
 }
+
+module.exports = SearchResults;
