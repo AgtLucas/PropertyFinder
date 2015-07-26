@@ -9,7 +9,8 @@ var React = require('react-native');
 var {
   AppRegistry,
   StyleSheet,
-  Text
+  Text,
+  NavigatorIOS
 } = React;
 
 var styles = StyleSheet.create({
@@ -18,14 +19,30 @@ var styles = StyleSheet.create({
     backgroundColor: 'white',
     fontSize: 30,
     margin: 80
+  },
+  container: {
+    flex: 1
   }
 });
 
-class ProperyFinder extends React.Component {
+class Yo extends React.Component {
   render() {
     return(
       <Text style={styles.text}>Yooo! :D</Text>
     )
+  }
+}
+
+class ProperyFinder extends React.Component {
+  render() {
+    return(
+      <NavigatorIOS
+        style={styles.container}
+        initialRoute={{
+          title: 'PropFinder',
+          component: Yo
+        }} />
+    );
   }
 }
 
